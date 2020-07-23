@@ -16,7 +16,7 @@
                 <a href="#" class="hide-desktop">
                     <img src="./images/ham.svg" alt="toggle menu" class="menu" id="menu">
                 </a>
-                <ul class="show-desktop hide-desktop" id="nav">
+                <ul class="show-desktop hide-mobile" id="nav">
                     <li id="exit" class="exit-btn hide-desktop"><img src="./images/exit.svg" alt="exit menu"></li>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Services</a></li>
@@ -54,7 +54,7 @@
                     </p>
                 </li>
                 <li>
-                    <img src="./images/icon-3.svg" alt="Calendar Icon">
+                    <img src="./images/icon-3.svg" alt="Mobile">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aspernatur voluptatum beatae
                         omnis rem ex quam, cupiditate impedit! Fugiat nihil repellat nisi, iste ut accusamus sit quis
@@ -112,6 +112,21 @@
             </div>
         </div>
     </footer>
+    <script>
+        var menu = document.getElementById("menu");
+        var nav = document.getElementById("nav");
+        var exit = document.getElementById("exit");
+        menu.addEventListener("click", function (e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+        exit.addEventListener("click", function (e) {
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+
+    </script>
 </body>
+
 
 </html>
